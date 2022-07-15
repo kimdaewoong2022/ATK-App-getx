@@ -1,0 +1,211 @@
+###
+# 로그인	post	/v1/passport/auth/user/account
+POST https://devapi.artiket.io/v1/passport/auth/user/account HTTP/1.1
+content-type: application/json
+
+{
+    "account": "test",
+    "password": "test1234"
+}
+
+###
+# 로그아웃	post	/v1/passport/auth/logout
+POST https://devapi.artiket.io/v1/passport/auth/logout HTTP/1.1
+
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+###
+# 주소록 생성	post	/v1/address
+POST https://devapi.artiket.io/v1/address HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+{
+    "name": "태백빌딩2",
+    "phone": "01067755497",
+    "states": "강원도",
+    "city": "태백시",
+    "address1": "강원도 태백시 광장로 30 (황지동)",
+    "address2": "태백빌딩 123호",
+    "zipcode": "26025"
+}
+
+###
+//주소록삭제	delete	/v1/cms/address/{uid}
+DELETE https://devapi.artiket.io/v1/address/3 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+###
+# 주소록 조회	get	/v1/address
+GET https://devapi.artiket.io/v1/address?page=1&size=10 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+###
+
+###
+# 주소록 상세	get	/v1/cms/address/{uid}
+GET https://devapi.artiket.io/v1/address/15 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+###
+# 주소록 수정	put	/v1/cms/address/{uid}
+PUT https://devapi.artiket.io/v1/address/5 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+{
+    "uid": "5",
+    "name": "태백빌딩33333",
+    "phone": "01067755497",
+    "states": "강원도",
+    "city": "태백시",
+    "address1": "강원도 태백시 광장로 30 (황지동)",
+    "address2": "태백빌딩 123호",
+    "zipcode": "26025"
+}
+
+###
+
+# 판매중인 카테고리별 아이템 리스트	get	/v1/inventory/each/items
+GET https://devapi.artiket.io/v1/inventory/each/items?page=1&size=10 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+###
+# 셀러가 등록한 인벤토리의 아이템을 아이템코드로 조회하기	get	/v1/inventory/items/{item_code}
+GET https://devapi.artiket.io/v1/inventory/items/itemANrkeIOZL2022517 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+###
+
+GET https://devapi.artiket.io/v1/inventory/items/itemzpbZhZECC2022519 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+###
+
+GET https://devapi.artiket.io/v1/inventory/items/AI2206213032902 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+
+GET https://devapi.artiket.io/v1/inventory/items/AI2207128813092 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+
+
+
+###
+# 장바구니 담기	post	/v1/cart
+POST https://devapi.artiket.io/v1/cart HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+{
+    "option_id": "itemPyvNRvLGZ2022517",
+    "item_code": "itemPyvNRvLGZ2022517",
+    "count": "1",
+    "orginal_price": "5000",
+    "option_price": "0",
+    "discount_price": "0",
+    "payment_price": "5000"
+}
+
+###
+# 장바구니 삭제	delete	/v1/cart/{uid}
+DELETE https://devapi.artiket.io/v1/cart/13 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+# 장바구니 조회	get	/v1/cart/{uid}
+GET https://devapi.artiket.io/v1/cart/13 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+# 장바구니 리스트 조회	get	/v1/cart
+GET https://devapi.artiket.io/v1/cart?page=1&size=10 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+# 장바구니 수정	put	/v1/cart/{uid}
+
+PUT https://devapi.artiket.io/v1/cart HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+{
+    "uid": "13",
+    "option_id": "itemPyvNRvLGZ2022517",
+    "item_code": "itemPyvNRvLGZ2022517",
+    "count": "1",
+    "orginal_price": "5000",
+    "option_price": "0",
+    "discount_price": "0",
+    "payment_price": "5000"
+}
+
+###
+# 주문 생성	post	/v1/orders
+
+###
+# 주문 수정	put	/v1/orders/{uid}
+###
+# 주문 취소	put	/v1/orders/cancel/{uid}
+
+###
+# 주문 리스트 조회	get	/v1/orders
+GET https://devapi.artiket.io/v1/orders?page=1&size=10 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+# 주문 조회	get	/v1/orders/{uid}
+GET https://devapi.artiket.io/v1/orders/50 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+
+
+###
+# 택배사 조회	get	/v1/tracking/company
+GET https://devapi.artiket.io/v1/tracking/recommended/company?invoice=123123123 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+# 택배사 운송장 조회	get	/v1/tracking/info 
+GET https://devapi.artiket.io/v1/tracking/info?code=123123123&invoice=12312333 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+# 유저의 relation total(주문수, 배송 진행중, 리뷰수, 메시지수, 피드 좋아요, 피드 북마크) 가져오기
+GET https://devapi.artiket.io/v1/user/relations/artiket/total HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjcyNDIyMywiZXhwIjoxNjYyNzcyMjIzfQ.tKdcV7U95mtxy5-Qr3N1QjTOcSit6A2hyan3DwI71OU
+
+
+###
+GET https://devapi.artiket.io/v1/user/relations/artiket/total HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnaWQiOjksInVzZXJfZW1haWwiOiJpbnNpZGVvbGVAZ21haWwuY29tIiwidXNlcl9waG9uZSI6IjAxMDUxMDQ1OTE2IiwicGhvbmUiOm51bGwsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyX25hbWUiOiLthYzsiqTtirjqs4TsoJUiLCJ1c2VyX2ZpcnN0X25hbWUiOiLsmYTsoIQiLCJ1c2VyX2xhc3RfbmFtZSI6Iu2FjOyKpO2KuCIsInByb2ZpbGVfaW1hZ2UiOiIiLCJ1c2VyX3R5cGUiOiJ1c2VyIiwicm9sZV9sZXZlbCI6MCwicm9sZV90eXBlIjoidXNlciIsInByb3ZpZGVyIjoidXNlciIsImlhdCI6MTY1NjgxMzU0OCwiZXhwIjoxNjYyODYxNTQ4fQ.ZNkkEXSSFlHhvSqu3Qz1zg46MgjsmHHIFixjy5QPiN4
+
