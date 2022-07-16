@@ -73,7 +73,7 @@ class LoginInitWidget extends GetView<LoginInitController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 btnFlatButtonBorderOnlyWidget(
-                  onPressed: () {},
+                  onPressed: controller.handleNavEmailLogIn,
                   width: 71,
                   iconFileName: "assets/images/auth/email.png",
                 ),
