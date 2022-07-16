@@ -37,4 +37,7 @@ class AppColors {
 
   /// tabCellSeparator 셀 하단 구분자 색상
   static const Color tabCellSeparator = Color.fromARGB(255, 230, 230, 231);
+
+  ///앱바 컬러 지정
+  static const Color appbarBackground = Color.fromARGB(0, 255, 255, 255);
 }

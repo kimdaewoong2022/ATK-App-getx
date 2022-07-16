@@ -1,5 +1,6 @@
 import 'package:artiket/common/middlewares/middlewares.dart';
 import 'package:artiket/pages/frame/sign_in/index.dart';
+import 'package:artiket/pages/frame/sign_up/index.dart';
 import 'package:artiket/pages/frame/welcome/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,10 +26,10 @@ class AppPages {
       page: () => SignInPage(),
       binding: SignInBinding(),
     ),
-    // GetPage(
-    //   name: AppRoutes.SIGN_UP,
-    //   page: () => SignUpPage(),
-    //   binding: SignUpBinding(),
-    // ),
+    GetPage(
+      name: AppRoutes.SIGN_UP,
+      page: () => SignUpPage(),
+      binding: SignUpBinding(),
+    ),
   ];
 }

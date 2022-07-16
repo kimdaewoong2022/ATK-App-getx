@@ -12,7 +12,10 @@ class WelcomeController extends GetxController {
   // 등록 인터페이스로 이동
   handleNavSignIn() async {
     await ConfigStore.to.saveAlreadyOpen();
-    Get.offAndToNamed(AppRoutes.SIGN_IN);
+    //Get.offAndToNamed(AppRoutes.SIGN_IN);
+    //Get.offAndToNamed(AppRoutes.SIGN_UP);
+    //Get.to(AppRoutes.SIGN_UP);
+    Get.toNamed(AppRoutes.SIGN_UP);
   }
 
   @override

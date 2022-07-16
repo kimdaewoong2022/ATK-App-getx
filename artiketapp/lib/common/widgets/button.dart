@@ -1,7 +1,64 @@
 import 'package:artiket/common/values/values.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+Widget btnFlatWhiteButtonWidget({
+  required VoidCallback onPressed,
+  double width = 140,
+  double height = 42,
+  Color gbColor = AppColors.primaryBackground,
+  String title = "button",
+  Color fontColor = AppColors.primaryElement,
+  double fontSize = 18,
+  String fontName = "Noto Sans",
+  FontWeight fontWeight = FontWeight.w400,
+}) {
+  return Container(
+    width: width.w,
+    height: height.h,
+    child: TextButton(
+      style: ButtonStyle(
+        textStyle: MaterialStateProperty.all(TextStyle(
+          fontSize: 16.sp,
+        )),
+        foregroundColor: MaterialStateProperty.resolveWith(
+          (states) {
+            if (states.contains(MaterialState.focused) &&
+                !states.contains(MaterialState.pressed)) {
+              return AppColors.primaryElement;
+            } else if (states.contains(MaterialState.pressed)) {
+              //return Colors.deepPurple;
+              return Colors.white;
+            }
+            return fontColor;
+          },
+        ),
+        backgroundColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.pressed)) {
+            //return Colors.deepPurple;
+            return Colors.white;
+          }
+          return gbColor;
+        }),
+        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+          borderRadius: Radii.k6pxRadius,
+        )),
+      ),
+      child: Text(
+        title,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: fontColor,
+          fontFamily: fontName,
+          fontWeight: fontWeight,
+          fontSize: fontSize.sp,
+          height: 1,
+        ),
+      ),
+      onPressed: onPressed,
+    ),
+  );
+}
 
 /// 평평한 둥근 버튼
 Widget btnFlatButtonWidget({

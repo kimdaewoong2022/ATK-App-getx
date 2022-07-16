@@ -1,0 +1,14 @@
+static const application = '/application';
+static const category = '/category';
+static const frameWelcome = '/frame_welcome';
+static const frameNotfound = '/frame_notfound';
+static const frameSignInInit = '/frame_signin_init';
+static const frameSignIn = '/frame_sign_in';
+static const frameSignUpInit = '/frame_signup_init';
+static const frameSignUp = '/frame_sign_up';
+static const frameSignUpComplete = '/frame_signup_complete';
+static const frameFindID = '/frame_find_id';
+static const frameFindMyID = '/frame_find_myid';
+static const frameResetPassword = '/frame_reset_password';
+static const frameResetPasswordComplete = '/frame_resetpassword_complete';
+static const main = '/main';
