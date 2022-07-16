@@ -8,7 +8,8 @@ class AppColors {
   static const Color primaryText = Color.fromARGB(255, 45, 45, 47);
 
   /// 메인 컨트롤 - 배경 파란색
-  static const Color primaryElement = Color.fromARGB(255, 41, 103, 255);
+  static const Color primaryElement = Color.fromARGB(255, 130, 37, 249);
+  //const Color primaryColor = Color.fromARGB(255, 130, 37, 249);
 
   /// 메인 컨트롤 - 텍스트 흰색
   static const Color primaryElementText = Color.fromARGB(255, 255, 255, 255);

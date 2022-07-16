@@ -1,68 +1,55 @@
+import 'package:artiket/common/routers/pages.dart';
+import 'package:artiket/common/style/style.dart';
+import 'package:artiket/common/utils/utils.dart';
+import 'package:artiket/global.dart';
+import 'package:artiket/pages/main/splashpage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await Global.init();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+    return ScreenUtilInit(
+      designSize: Size(375, 812),
+      //builder: () => RefreshConfiguration(
+      builder: (BuildContext context, Widget? widget) => RefreshConfiguration(
+        headerBuilder: () => ClassicHeader(),
+        footerBuilder: () => ClassicFooter(),
+        hideFooterWhenNotFull: true,
+        headerTriggerDistance: 80,
+        maxOverScrollExtent: 100,
+        footerTriggerDistance: 150,
+        child: GetMaterialApp(
+          title: 'Artiket',
+          theme: AppTheme.light,
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppPages.INITIAL,
+          getPages: AppPages.routes,
+          //home: const SplashPage(),
+          builder: EasyLoading.init(),
+          //translations: TranslationService(),
+          navigatorObservers: [AppPages.observer],
+          // localizationsDelegates: [
+          //   GlobalMaterialLocalizations.delegate,
+          //   GlobalWidgetsLocalizations.delegate,
+          //   GlobalCupertinoLocalizations.delegate,
+          // ],
+          // supportedLocales: ConfigStore.to.languages,
+          //locale: ConfigStore.to.locale,
+          // locale: Locale('en', 'US'),
+          // fallbackLocale: Locale('en', 'US'),
+          enableLog: true,
+          logWriterCallback: Logger.write,
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

@@ -1,4 +1,5 @@
 library utils;
 
-export 'validator.dart';
 export 'loading.dart';
+export 'logger.dart';
+export 'validator.dart';
