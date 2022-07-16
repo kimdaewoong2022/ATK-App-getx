@@ -117,11 +117,10 @@ Widget btnFlatButtonWidget({
   );
 }
 
-/// 타사 버튼
 Widget btnFlatButtonBorderOnlyWidget({
   required VoidCallback onPressed,
   double width = 88,
-  double height = 44,
+  double height = 88,
   required String iconFileName,
 }) {
   return Container(
@@ -154,7 +153,7 @@ Widget btnFlatButtonBorderOnlyWidget({
         )),
       ),
       child: Image.asset(
-        "assets/images/icons-$iconFileName.png",
+        "$iconFileName",
       ),
       onPressed: onPressed,
     ),

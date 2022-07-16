@@ -1,0 +1,2 @@
+static const ellipse49Svg = 'assets/svgs/ellipse49.svg';
+static const vector96Svg = 'assets/svgs/vector96.svg';

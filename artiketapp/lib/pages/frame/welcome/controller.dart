@@ -15,7 +15,12 @@ class WelcomeController extends GetxController {
     //Get.offAndToNamed(AppRoutes.SIGN_IN);
     //Get.offAndToNamed(AppRoutes.SIGN_UP);
     //Get.to(AppRoutes.SIGN_UP);
-    Get.toNamed(AppRoutes.SIGN_UP);
+    //Get.toNamed(AppRoutes.SIGN_UP);
+    //Get.offAndToNamed(AppRoutes.LOGININ_INIT);
+    Get.toNamed(AppRoutes.LOGININ_INIT);
+    //Get.toNamed(AppRoutes.EMAIL_LOGIN);
+    //Get.toNamed(AppRoutes.SIGNUP_INIT);
+    //Get.toNamed(AppRoutes.SIGNUP_COMPLETE);
   }
 
   @override
