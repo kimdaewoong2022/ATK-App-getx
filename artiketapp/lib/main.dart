@@ -2,7 +2,7 @@ import 'package:artiket/common/routers/pages.dart';
 import 'package:artiket/common/style/style.dart';
 import 'package:artiket/common/utils/utils.dart';
 import 'package:artiket/global.dart';
-import 'package:artiket/pages/main/splashpage.dart';
+import 'package:artiket/pages/splashpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

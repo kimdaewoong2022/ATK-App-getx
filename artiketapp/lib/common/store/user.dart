@@ -51,6 +51,11 @@ class UserStore extends GetxController {
   //   StorageService.to.setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile));
   // }
 
+  void saveProfile(bool boll) {
+    _isLogin.value = boll;
+    //StorageService.to.setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile));
+  }
+
   // // 로그아웃
   // Future<void> onLogout() async {
   //   if (_isLogin.value) await UserAPI.logout();

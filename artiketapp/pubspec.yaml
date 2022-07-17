@@ -50,6 +50,10 @@ dependencies:
   chopper: ^4.0.1
   json_annotation:
 
+  uni_links: ^0.5.1
+
+  dot_navigation_bar:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

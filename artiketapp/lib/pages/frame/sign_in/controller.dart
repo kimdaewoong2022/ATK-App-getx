@@ -1,4 +1,6 @@
+import 'package:artiket/common/entities/entities.dart';
 import 'package:artiket/common/routers/routes.dart';
+import 'package:artiket/common/store/store.dart';
 import 'package:artiket/common/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -44,12 +46,14 @@ class SignInController extends GetxController {
     //   password: duSHA256(passController.value.text),
     // );
 
+    //임시 로그인 처리
     // UserLoginResponseEntity userProfile = await UserAPI.login(
     //   params: params,
     // );
-    // UserStore.to.saveProfile(userProfile);
 
-    // Get.offAndToNamed(AppRoutes.Application);
+    UserStore.to.saveProfile(true);
+
+    Get.offAndToNamed(AppRoutes.Application);
   }
 
   @override

@@ -1,4 +1,7 @@
 import 'package:artiket/common/middlewares/middlewares.dart';
+import 'package:artiket/pages/application/index.dart';
+import 'package:artiket/pages/favorite/index.dart';
+import 'package:artiket/pages/feed/index.dart';
 import 'package:artiket/pages/frame/email_login/index.dart';
 import 'package:artiket/pages/frame/login_init/index.dart';
 import 'package:artiket/pages/frame/sign_in/index.dart';
@@ -6,6 +9,9 @@ import 'package:artiket/pages/frame/sign_up/index.dart';
 import 'package:artiket/pages/frame/signup_complete/view.dart';
 import 'package:artiket/pages/frame/signup_init/index.dart';
 import 'package:artiket/pages/frame/welcome/index.dart';
+import 'package:artiket/pages/home/index.dart';
+import 'package:artiket/pages/profile/index.dart';
+import 'package:artiket/pages/search/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -54,6 +60,39 @@ class AppPages {
       name: AppRoutes.SIGNUP_COMPLETE,
       page: () => SignupCompletePage(),
       binding: SignUpBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.Application,
+      page: () => ApplicationPage(),
+      binding: ApplicationBinding(),
+      middlewares: [
+        RouteAuthMiddleware(priority: 1),
+      ],
+    ),
+    GetPage(
+      name: AppRoutes.Home,
+      page: () => HomePage(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.Feed,
+      page: () => FeedPage(),
+      binding: FeedBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.Search,
+      page: () => SearchPage(),
+      binding: SearchBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.Favorite,
+      page: () => FavoritePage(),
+      binding: FavoriteBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.Profile,
+      page: () => ProfilePage(),
+      binding: ProfileBinding(),
     ),
   ];
 }

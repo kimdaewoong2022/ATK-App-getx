@@ -21,8 +21,8 @@ class LoginInitController extends GetxController {
   // tap
   void handleTap(int index) {
     Get.snackbar(
-      "标题",
-      "消息",
+      "제목",
+      "정보",
     );
   }
 
