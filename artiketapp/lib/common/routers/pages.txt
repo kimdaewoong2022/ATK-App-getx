@@ -1,0 +1,29 @@
+
+      GetPage(
+        name: RouteNames.frameEmailLogin,
+        page: () => const EmailLoginPage(),
+      ),
+      GetPage(
+        name: RouteNames.frameLoginInit,
+        page: () => const LoginInitPage(),
+      ),
+      GetPage(
+        name: RouteNames.frameSignIn,
+        page: () => const SignInPage(),
+      ),
+      GetPage(
+        name: RouteNames.frameSignUp,
+        page: () => const SignUpPage(),
+      ),
+      GetPage(
+        name: RouteNames.frameSignupComplete,
+        page: () => const SignupCompletePage(),
+      ),
+      GetPage(
+        name: RouteNames.frameSignupInit,
+        page: () => const SignupInitPage(),
+      ),
+      GetPage(
+        name: RouteNames.frameWelcome,
+        page: () => const WelcomePage(),
+      ),

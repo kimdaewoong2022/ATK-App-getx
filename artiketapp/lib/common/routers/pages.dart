@@ -3,7 +3,7 @@ import 'package:artiket/pages/frame/email_login/index.dart';
 import 'package:artiket/pages/frame/login_init/index.dart';
 import 'package:artiket/pages/frame/sign_in/index.dart';
 import 'package:artiket/pages/frame/sign_up/index.dart';
-import 'package:artiket/pages/frame/signup_complete/index.dart';
+import 'package:artiket/pages/frame/signup_complete/view.dart';
 import 'package:artiket/pages/frame/signup_init/index.dart';
 import 'package:artiket/pages/frame/welcome/index.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +53,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.SIGNUP_COMPLETE,
       page: () => SignupCompletePage(),
-      binding: SignupCompleteBinding(),
+      binding: SignUpBinding(),
     ),
   ];
 }
