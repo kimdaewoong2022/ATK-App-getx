@@ -1,3 +1,3 @@
 library widgets;
 
-export './hello.dart';
+export './center_imagewidget.dart';

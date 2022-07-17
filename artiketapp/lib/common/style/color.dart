@@ -14,7 +14,7 @@ class AppColor {
   static const Color secondaryText = Color(0xFF74788D);
 
   /// 하이라이트 색상
-  static const Color accentColor = Color(0xFF5C78FF);
+  static const Color accentColor = Color.fromARGB(255, 130, 37, 249);
 
   /// 보조 색상
   static const Color secondaryColor = Color(0xFFDEE3FF);
@@ -28,4 +28,7 @@ class AppColor {
   static const Color pinkColor = Color(0xFFF77866);
 
   static const Color yellowColor = Color(0xFFFFB822);
+
+  static const Color themeInputBorderColor = Color.fromARGB(255, 212, 212, 212);
+  static const Color themeInputFillColor = Colors.white;
 }

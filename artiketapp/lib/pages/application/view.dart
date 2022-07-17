@@ -79,7 +79,7 @@ class ApplicationPage extends GetView<ApplicationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
+      //appBar: _buildAppBar(),
       body: _buildPageView(),
       bottomNavigationBar: _buildBottomNavigationBar(),
     );

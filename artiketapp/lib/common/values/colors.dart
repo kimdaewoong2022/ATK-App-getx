@@ -40,4 +40,7 @@ class AppColors {
 
   ///앱바 컬러 지정
   static const Color appbarBackground = Color.fromARGB(0, 255, 255, 255);
+
+  ///텍스트 박스 보더 컬러
+  static const Color inputBorderColor = Color.fromARGB(255, 212, 212, 212);
 }

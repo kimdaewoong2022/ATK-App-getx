@@ -4,9 +4,8 @@ import 'package:get/get.dart';
 
 import '../index.dart';
 
-/// hello
-class HelloWidget extends GetView<EmailLoginController> {
-  const HelloWidget({Key? key}) : super(key: key);
+class Center_ImageWidget extends GetView<EmailLoginController> {
+  const Center_ImageWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
