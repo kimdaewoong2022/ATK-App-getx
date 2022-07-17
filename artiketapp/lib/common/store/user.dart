@@ -5,6 +5,7 @@ import 'package:artiket/common/apis/user.dart';
 import 'package:artiket/common/entities/entities.dart';
 import 'package:artiket/common/services/storage.dart';
 import 'package:artiket/common/values/values.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class UserStore extends GetxController {
@@ -68,5 +69,7 @@ class UserStore extends GetxController {
     await StorageService.to.remove(STORAGE_USER_TOKEN_KEY);
     _isLogin.value = false;
     token = '';
+
+    debugPrint('handleLogout!! : 2 ');
   }
 }

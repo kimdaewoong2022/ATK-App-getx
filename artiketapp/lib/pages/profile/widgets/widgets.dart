@@ -1,3 +1,4 @@
 library widgets;
 
-export './hello.dart';
+export 'profile_widget.dart';
+export 'userProfilePanelWidget.dart';

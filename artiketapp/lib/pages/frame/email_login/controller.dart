@@ -50,6 +50,12 @@ class EmailLoginController extends GetxController {
       StorageService.to
           .setString(STORAGE_USER_TOKEN_KEY, (userProfile.data!.accessToken)!);
 
+      StorageService.to
+          .setString(STORAGE_USER_NAME, (userProfile.data!.profile!.userName)!);
+
+      StorageService.to
+          .setString(STORAGE_USER_ID, (userProfile.data!.profile!.username)!);
+
       Get.offAndToNamed(AppRoutes.Application);
     } else {
       toastInfo(msg: '로그인 정보를 다시 입력해주세요.');

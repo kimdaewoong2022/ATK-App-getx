@@ -7,9 +7,8 @@ import 'widgets/widgets.dart';
 class ProfilePage extends GetView<ProfileController> {
   const ProfilePage({Key? key}) : super(key: key);
 
-  // 主视图
   Widget _buildView() {
-    return const HelloWidget();
+    return const ProfileWidget();
   }
 
   @override
@@ -17,7 +16,7 @@ class ProfilePage extends GetView<ProfileController> {
     return GetBuilder<ProfileController>(
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("profile")),
+          //appBar: AppBar(title: const Text("profile")),
           body: SafeArea(
             child: _buildView(),
           ),
