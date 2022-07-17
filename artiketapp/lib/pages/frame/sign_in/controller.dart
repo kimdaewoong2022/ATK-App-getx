@@ -51,8 +51,6 @@ class SignInController extends GetxController {
     //   params: params,
     // );
 
-    UserStore.to.saveProfile(true);
-
     Get.offAndToNamed(AppRoutes.Application);
   }
 

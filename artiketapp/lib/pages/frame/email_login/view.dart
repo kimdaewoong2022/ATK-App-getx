@@ -25,10 +25,18 @@ class EmailLoginPage extends GetView<EmailLoginController> {
           ),
           // password input
           inputPasswordTextEdit_artiket(
-            controller: controller.passController,
-            keyboardType: TextInputType.visiblePassword,
-            hintText: "비밀번호",
-            isPassword: true,
+              controller: controller.passController,
+              keyboardType: TextInputType.visiblePassword,
+              hintText: "비밀번호",
+              isPassword: true,
+              marginTop: 10),
+
+          // 로그인
+          btnFlatButtonWidget(
+            width: 295.w,
+            onPressed: controller.handleLogIn,
+            gbColor: AppColors.brackButtonBackground,
+            title: "로그인",
           ),
         ],
       ),
@@ -36,21 +44,7 @@ class EmailLoginPage extends GetView<EmailLoginController> {
     // Column(
     //   children: [
     //     const Center_ImageWidget(),
-    //     // email input
-    //     inputTextEdit(
-    //       controller: controller.emailController,
-    //       keyboardType: TextInputType.emailAddress,
-    //       hintText: "Email",
-    //       marginTop: 0,
-    //       // autofocus: true,
-    //     ),
-    //     // password input
-    //     inputTextEdit(
-    //       controller: controller.passController,
-    //       keyboardType: TextInputType.visiblePassword,
-    //       hintText: "Password",
-    //       isPassword: true,
-    //     ),
+
     //     // 이메일
     //     btnFlatButtonWidget(
     //       onPressed: controller.handleNavSignUp,
@@ -95,10 +89,15 @@ class EmailLoginPage extends GetView<EmailLoginController> {
             ],
           ),
           body: Center(
-            child: Column(
-              children: <Widget>[
-                _buildView(),
-              ],
+            child: GestureDetector(
+              onTap: () {
+                FocusManager.instance.primaryFocus?.unfocus(); // 키보드 닫기 이벤트
+              },
+              child: Column(
+                children: <Widget>[
+                  _buildView(),
+                ],
+              ),
             ),
           ),
         );

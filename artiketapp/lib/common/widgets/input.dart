@@ -63,6 +63,11 @@ Widget inputTextEdit_artiket({
       decoration: InputDecoration(
         filled: true,
         labelText: hintText,
+        labelStyle: const TextStyle(
+          color: AppColors.primaryElement,
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ),
         hintStyle: const TextStyle(color: Colors.grey),
         fillColor: AppColors.primaryBackground,
         border: OutlineInputBorder(
@@ -145,6 +150,11 @@ Widget inputPasswordTextEdit_artiket({
         filled: true,
         //hintStyle: const TextStyle(color: Colors.grey),
         labelText: '비밀번호',
+        labelStyle: const TextStyle(
+          color: AppColors.primaryElement,
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ),
         // suffixIcon: InkWell(
         //   onTap: () {
         //     isObsecure.value = !isObsecure.value;

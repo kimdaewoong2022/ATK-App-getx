@@ -20,7 +20,7 @@ class AppColors {
   static const Color secondaryElement = Color.fromARGB(255, 246, 246, 246);
 
   /// 두 번째 컨트롤 - 텍스트 하늘색
-  static const Color secondaryElementText = Color.fromARGB(255, 41, 103, 255);
+  static const Color secondaryElementText = Color.fromARGB(255, 130, 37, 249);
 
   // *****************************************
 
@@ -43,4 +43,7 @@ class AppColors {
 
   ///텍스트 박스 보더 컬러
   static const Color inputBorderColor = Color.fromARGB(255, 212, 212, 212);
+
+  //블랙버튼
+  static const Color brackButtonBackground = Color.fromARGB(255, 0, 0, 0);
 }

@@ -14,8 +14,8 @@ class UserAPI {
       String account, String password) async {
     final client = ArtiketServiceJson.create();
 
-    chopper.Response<BasicResult> basicResult =
-        await client.v1PassportAuthUserAccountPost(account: '', password: '');
+    chopper.Response<BasicResult> basicResult = await client
+        .v1PassportAuthUserAccountPost(account: account, password: password);
 
     if (basicResult.statusCode != 200) {
       ///Some network error
@@ -27,9 +27,9 @@ class UserAPI {
       Map<String, dynamic> dataMap = jsonDecode(jsonString);
       var userAccountProfile = UserAccountProfile.fromJson(dataMap);
 
-      //엑세스 토큰 저장
-      StorageService.to.setString(
-          STORAGE_USER_TOKEN_KEY, (userAccountProfile.data!.accessToken)!);
+      // //엑세스 토큰 저장
+      // StorageService.to.setString(
+      //     STORAGE_USER_TOKEN_KEY, (userAccountProfile.data!.accessToken)!);
       return userAccountProfile;
     }
   }

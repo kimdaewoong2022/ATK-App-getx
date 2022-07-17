@@ -65,6 +65,7 @@ Widget btnFlatButtonWidget({
   required VoidCallback onPressed,
   double width = 140,
   double height = 44,
+  double marginTop = 15,
   Color gbColor = AppColors.primaryElement,
   String title = "button",
   Color fontColor = AppColors.primaryElementText,
@@ -75,6 +76,7 @@ Widget btnFlatButtonWidget({
   return Container(
     width: width.w,
     height: height.h,
+    margin: EdgeInsets.only(top: marginTop),
     child: TextButton(
       style: ButtonStyle(
         textStyle: MaterialStateProperty.all(TextStyle(
@@ -98,7 +100,7 @@ Widget btnFlatButtonWidget({
           return gbColor;
         }),
         shape: MaterialStateProperty.all(RoundedRectangleBorder(
-          borderRadius: Radii.k6pxRadius,
+          borderRadius: Radii.k5pxRadius,
         )),
       ),
       child: Text(

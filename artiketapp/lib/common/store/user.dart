@@ -46,15 +46,20 @@ class UserStore extends GetxController {
   // }
 
   // // profile 저장
+  Future<void> saveProfile(UserAccountProfile profile) async {
+    _isLogin.value = true;
+    StorageService.to.setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile));
+  }
+
   // Future<void> saveProfile(UserLoginResponseEntity profile) async {
   //   _isLogin.value = true;
   //   StorageService.to.setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile));
   // }
 
-  void saveProfile(bool boll) {
-    _isLogin.value = boll;
-    //StorageService.to.setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile));
-  }
+  // void saveProfile(bool boll) {
+  //   _isLogin.value = boll;
+  //   //StorageService.to.setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile));
+  // }
 
   // // 로그아웃
   // Future<void> onLogout() async {
