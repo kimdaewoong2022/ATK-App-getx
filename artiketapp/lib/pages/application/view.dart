@@ -56,14 +56,14 @@ class ApplicationPage extends GetView<ApplicationController> {
 
   Widget _buildBottomNavigationBar() {
     return Obx(() => DotNavigationBar(
-          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
+          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           enableFloatingNavBar: false,
           itemPadding: const EdgeInsets.symmetric(horizontal: 15),
           currentIndex: controller.state.page,
           duration: const Duration(milliseconds: 1200),
           //backgroundColor: Get.theme.backgroundColor,
           //backgroundColor: Color.fromARGB(180, 255, 255, 255).withOpacity(0.2),
-          backgroundColor: const Color.fromARGB(180, 255, 255, 255),
+          backgroundColor: Color.fromARGB(180, 255, 255, 255),
           // backgroundColor:
           //     Colors.black.withOpacity(0.1), //here set your transparent level
           //backgroundColor: Colors.black.withOpacity(0.2),

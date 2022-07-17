@@ -6,3 +6,6 @@ const String STORAGE_USER_TOKEN_KEY = 'user_token';
 
 /// 장치가 처음 열렸는지 여부
 const String STORAGE_DEVICE_FIRST_OPEN_KEY = 'device_first_open';
+
+/// 메뉴 인덱스
+const String MENU_INDEX_KEY = 'menu_index';

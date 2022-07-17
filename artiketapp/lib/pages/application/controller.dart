@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:artiket/common/services/storage.dart';
 import 'package:artiket/common/values/values.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,13 @@ import 'index.dart';
 
 class ApplicationController extends GetxController {
   ApplicationController();
+
+  static ApplicationController get to => Get.find<ApplicationController>();
+
+  final intMenuIndex = 0.obs;
+  setMenuIndex(final int menuIndex) {
+    intMenuIndex.value = menuIndex;
+  }
 
   final state = ApplicationState();
 
@@ -31,6 +39,10 @@ class ApplicationController extends GetxController {
   // 탭바 페이지 번호 전환
   void handlePageChanged(int page) {
     state.page = page;
+    StorageService.to.setString(MENU_INDEX_KEY, page.toString());
+    debugPrint('state.page :: ${state.page}');
+    debugPrint(
+        'getString(MENU_INDEX_KEY) :: ${StorageService.to.getString(MENU_INDEX_KEY)}');
   }
 
   /// 스키마가 내부적으로 열려 있습니다.
@@ -76,7 +88,8 @@ class ApplicationController extends GetxController {
       DotNavigationBarItem(
         icon: SvgPicture.asset(
           "assets/icons/ico_home.svg",
-          color: state.page == 0
+          //color: state.page == 0
+          color: StorageService.to.getString(MENU_INDEX_KEY) == '0'
               ? AppColors.primaryElement
               : Color.fromARGB(255, 132, 132, 132),
         ),
@@ -87,8 +100,8 @@ class ApplicationController extends GetxController {
       DotNavigationBarItem(
         icon: SvgPicture.asset(
           "assets/icons/ico_feed.svg",
-          //color: _index.value == 1
-          color: state.page == 1
+          //color: state.page == 1
+          color: StorageService.to.getString(MENU_INDEX_KEY) == '1'
               ? AppColors.primaryElement
               : Color.fromARGB(255, 132, 132, 132),
         ),
@@ -99,7 +112,8 @@ class ApplicationController extends GetxController {
       DotNavigationBarItem(
         icon: SvgPicture.asset(
           "assets/icons/ico_search.svg",
-          color: state.page == 2
+          //color: state.page == 2
+          color: StorageService.to.getString(MENU_INDEX_KEY) == '2'
               ? AppColors.primaryElement
               : Color.fromARGB(255, 132, 132, 132),
         ),
@@ -110,7 +124,8 @@ class ApplicationController extends GetxController {
       DotNavigationBarItem(
         icon: SvgPicture.asset(
           "assets/icons/ico_heart.svg",
-          color: state.page == 3
+          //color: state.page == 3
+          color: StorageService.to.getString(MENU_INDEX_KEY) == '3'
               ? AppColors.primaryElement
               : Color.fromARGB(255, 132, 132, 132),
         ),
@@ -121,7 +136,8 @@ class ApplicationController extends GetxController {
       DotNavigationBarItem(
         icon: SvgPicture.asset(
           "assets/icons/ico_person.svg",
-          color: state.page == 4
+          //color: state.page == 4
+          color: StorageService.to.getString(MENU_INDEX_KEY) == '4'
               ? AppColors.primaryElement
               : Color.fromARGB(255, 132, 132, 132),
         ),

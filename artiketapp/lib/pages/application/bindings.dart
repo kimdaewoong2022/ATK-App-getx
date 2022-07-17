@@ -10,11 +10,12 @@ import 'controller.dart';
 class ApplicationBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<ApplicationController>(() => ApplicationController());
-    Get.lazyPut<HomeController>(() => HomeController());
-    Get.lazyPut<FeedController>(() => FeedController());
-    Get.lazyPut<SearchController>(() => SearchController());
-    Get.lazyPut<FavoriteController>(() => FavoriteController());
-    Get.lazyPut<ProfileController>(() => ProfileController());
+    Get.lazyPut<ApplicationController>(() => ApplicationController(),
+        fenix: true);
+    Get.lazyPut<HomeController>(() => HomeController(), fenix: true);
+    Get.lazyPut<FeedController>(() => FeedController(), fenix: true);
+    Get.lazyPut<SearchController>(() => SearchController(), fenix: true);
+    Get.lazyPut<FavoriteController>(() => FavoriteController(), fenix: true);
+    Get.lazyPut<ProfileController>(() => ProfileController(), fenix: true);
   }
 }
