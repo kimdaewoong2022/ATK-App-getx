@@ -31,6 +31,11 @@ class AppPages {
         RouteWelcomeMiddleware(priority: 1),
       ],
     ),
+    // GetPage(
+    //   name: AppRoutes.WELCOME,
+    //   page: () => WelcomePage(),
+    //   binding: WelcomeBinding(),
+    // ),
     GetPage(
       name: AppRoutes.LOGININ_INIT,
       page: () => LoginInitPage(),

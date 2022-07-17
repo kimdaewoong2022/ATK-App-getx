@@ -1,5 +1,6 @@
 import 'package:artiket/common/routers/routes.dart';
 import 'package:artiket/common/store/config.dart';
+import 'package:artiket/common/store/store.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -16,10 +17,12 @@ class RouteWelcomeMiddleware extends GetMiddleware {
   RouteSettings? redirect(String? route) {
     // if (ConfigStore.to.isFirstOpen == true) {
     //   return null;
-    //   // } else if (UserStore.to.isLogin == true) {
-    //   //   return RouteSettings(name: AppRoutes.Application);
-    // } else {
-    //   return RouteSettings(name: AppRoutes.SIGN_IN);
-    // }
+    // } else
+    if (UserStore.to.isLogin == true) {
+      return RouteSettings(name: AppRoutes.Application);
+    } else {
+      return RouteSettings(name: AppRoutes.LOGININ_INIT);
+      //return RouteSettings(name: AppRoutes.INITIAL);
+    }
   }
 }

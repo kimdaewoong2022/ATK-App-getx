@@ -90,7 +90,8 @@ class ApplicationController extends GetxController {
           "assets/icons/ico_home.svg",
           //color: state.page == 0
           color: StorageService.to.getString(MENU_INDEX_KEY) == '0'
-              ? AppColors.primaryElement
+              //? AppColors.primaryElement
+              ? Color.fromARGB(255, 132, 132, 132)
               : Color.fromARGB(255, 132, 132, 132),
         ),
         selectedColor: AppColors.primaryElement,
@@ -102,7 +103,8 @@ class ApplicationController extends GetxController {
           "assets/icons/ico_feed.svg",
           //color: state.page == 1
           color: StorageService.to.getString(MENU_INDEX_KEY) == '1'
-              ? AppColors.primaryElement
+              //? AppColors.primaryElement
+              ? Color.fromARGB(255, 132, 132, 132)
               : Color.fromARGB(255, 132, 132, 132),
         ),
         selectedColor: AppColors.primaryElement,
@@ -114,7 +116,8 @@ class ApplicationController extends GetxController {
           "assets/icons/ico_search.svg",
           //color: state.page == 2
           color: StorageService.to.getString(MENU_INDEX_KEY) == '2'
-              ? AppColors.primaryElement
+              //? AppColors.primaryElement
+              ? Color.fromARGB(255, 132, 132, 132)
               : Color.fromARGB(255, 132, 132, 132),
         ),
         selectedColor: AppColors.primaryElement,
@@ -126,7 +129,8 @@ class ApplicationController extends GetxController {
           "assets/icons/ico_heart.svg",
           //color: state.page == 3
           color: StorageService.to.getString(MENU_INDEX_KEY) == '3'
-              ? AppColors.primaryElement
+              //? AppColors.primaryElement
+              ? Color.fromARGB(255, 132, 132, 132)
               : Color.fromARGB(255, 132, 132, 132),
         ),
         selectedColor: AppColors.primaryElement,
@@ -138,7 +142,8 @@ class ApplicationController extends GetxController {
           "assets/icons/ico_person.svg",
           //color: state.page == 4
           color: StorageService.to.getString(MENU_INDEX_KEY) == '4'
-              ? AppColors.primaryElement
+              //? AppColors.primaryElement
+              ? Color.fromARGB(255, 132, 132, 132)
               : Color.fromARGB(255, 132, 132, 132),
         ),
         selectedColor: AppColors.primaryElement,

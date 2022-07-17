@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 // import 'package:artiket/common/apis/apis.dart';
+import 'package:artiket/common/apis/user.dart';
 import 'package:artiket/common/entities/entities.dart';
 import 'package:artiket/common/services/storage.dart';
 import 'package:artiket/common/values/values.dart';
@@ -14,10 +15,10 @@ class UserStore extends GetxController {
   // token
   String token = '';
   // profile
-  final _profile = UserLoginResponseEntity().obs;
+  final _profile = UserAccountProfile().obs;
 
   bool get isLogin => _isLogin.value;
-  UserLoginResponseEntity get profile => _profile.value;
+  UserAccountProfile get profile => _profile.value;
   bool get hasToken => token.isNotEmpty;
 
   @override
@@ -26,7 +27,7 @@ class UserStore extends GetxController {
     token = StorageService.to.getString(STORAGE_USER_TOKEN_KEY);
     var profileOffline = StorageService.to.getString(STORAGE_USER_PROFILE_KEY);
     if (profileOffline.isNotEmpty) {
-      _profile(UserLoginResponseEntity.fromJson(jsonDecode(profileOffline)));
+      _profile(UserAccountProfile.fromJson(jsonDecode(profileOffline)));
     }
   }
 
@@ -62,10 +63,10 @@ class UserStore extends GetxController {
   // }
 
   // // 로그아웃
-  // Future<void> onLogout() async {
-  //   if (_isLogin.value) await UserAPI.logout();
-  //   await StorageService.to.remove(STORAGE_USER_TOKEN_KEY);
-  //   _isLogin.value = false;
-  //   token = '';
-  // }
+  Future<void> onLogout() async {
+    if (_isLogin.value) await UserAPI.logout();
+    await StorageService.to.remove(STORAGE_USER_TOKEN_KEY);
+    _isLogin.value = false;
+    token = '';
+  }
 }
