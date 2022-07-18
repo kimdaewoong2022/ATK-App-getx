@@ -10,7 +10,6 @@ import 'widgets/widgets.dart';
 class SignupInitPage extends GetView<SignupInitController> {
   const SignupInitPage({Key? key}) : super(key: key);
 
-  // 主视图
   Widget _buildView() {
     return const HelloWidget();
   }

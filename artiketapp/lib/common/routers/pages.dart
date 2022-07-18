@@ -4,7 +4,6 @@ import 'package:artiket/pages/favorite/index.dart';
 import 'package:artiket/pages/feed/index.dart';
 import 'package:artiket/pages/frame/email_login/index.dart';
 import 'package:artiket/pages/frame/login_init/index.dart';
-import 'package:artiket/pages/frame/sign_in/index.dart';
 import 'package:artiket/pages/frame/sign_up/index.dart';
 import 'package:artiket/pages/frame/signup_complete/view.dart';
 import 'package:artiket/pages/frame/signup_init/index.dart';
@@ -45,12 +44,7 @@ class AppPages {
       name: AppRoutes.EMAIL_LOGIN,
       page: () => EmailLoginPage(),
       binding: EmailLoginBinding(),
-    ),
-    GetPage(
-      name: AppRoutes.SIGN_IN,
-      page: () => SignInPage(),
-      binding: SignInBinding(),
-    ),
+    ),    
     GetPage(
       name: AppRoutes.SIGNUP_INIT,
       page: () => SignupInitPage(),

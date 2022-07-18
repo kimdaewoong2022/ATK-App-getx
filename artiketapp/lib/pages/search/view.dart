@@ -7,7 +7,6 @@ import 'widgets/widgets.dart';
 class SearchPage extends GetView<SearchController> {
   const SearchPage({Key? key}) : super(key: key);
 
-  // 主视图
   Widget _buildView() {
     return const HelloWidget();
   }

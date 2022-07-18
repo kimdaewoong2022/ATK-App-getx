@@ -1,6 +1,5 @@
 export 'frame/email_login/index.dart';
 export 'frame/login_init/index.dart';
-export 'frame/sign_in/index.dart';
 export 'frame/sign_up/index.dart';
 export 'frame/signup_complete/index.dart';
 export 'frame/signup_init/index.dart';

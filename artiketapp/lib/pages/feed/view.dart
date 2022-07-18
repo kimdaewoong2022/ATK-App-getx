@@ -7,7 +7,6 @@ import 'widgets/widgets.dart';
 class FeedPage extends GetView<FeedController> {
   const FeedPage({Key? key}) : super(key: key);
 
-  // 主视图
   Widget _buildView() {
     return const HelloWidget();
   }

@@ -2,8 +2,7 @@ class AppRoutes {
   static const INITIAL = '/';
   //static const WELCOME = '/welcome';
   static const LOGININ_INIT = '/login_init';
-  static const EMAIL_LOGIN = '/email_login';
-  static const SIGN_IN = '/sign_in';
+  static const EMAIL_LOGIN = '/email_login';  
   static const SIGNUP_INIT = '/signup_init';
   static const SIGN_UP = '/sign_up';
   static const SIGNUP_COMPLETE = '/signup_complete';

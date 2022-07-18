@@ -14,16 +14,14 @@ class RouteAuthMiddleware extends GetMiddleware {
 
   @override
   RouteSettings? redirect(String? route) {
-    if (UserStore.to.isLogin ||
-        //route == AppRoutes.SIGN_IN ||
+    if (UserStore.to.isLogin ||        
         route == AppRoutes.LOGININ_INIT ||
         route == AppRoutes.SIGN_UP ||
         route == AppRoutes.INITIAL) {
       return null;
     } else {
       Future.delayed(Duration(seconds: 1),
-          () => Get.snackbar("인증 만료", "로그인이 만료되었습니다. 다시 로그인하십시오."));
-      //return RouteSettings(name: AppRoutes.SIGN_IN);
+          () => Get.snackbar("인증 만료", "로그인이 만료되었습니다. 다시 로그인하십시오."));      
       return RouteSettings(name: AppRoutes.LOGININ_INIT);
     }
   }

@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
-      //builder: () => RefreshConfiguration(
+      designSize: Size(375, 812),      
       builder: (BuildContext context, Widget? widget) => RefreshConfiguration(
         headerBuilder: () => ClassicHeader(),
         footerBuilder: () => ClassicFooter(),
@@ -35,17 +34,7 @@ class MyApp extends StatelessWidget {
           getPages: AppPages.routes,
           //home: const SplashPage(),
           builder: EasyLoading.init(),
-          //translations: TranslationService(),
           navigatorObservers: [AppPages.observer],
-          // localizationsDelegates: [
-          //   GlobalMaterialLocalizations.delegate,
-          //   GlobalWidgetsLocalizations.delegate,
-          //   GlobalCupertinoLocalizations.delegate,
-          // ],
-          // supportedLocales: ConfigStore.to.languages,
-          //locale: ConfigStore.to.locale,
-          // locale: Locale('en', 'US'),
-          // fallbackLocale: Locale('en', 'US'),
           enableLog: true,
           logWriterCallback: Logger.write,
         ),

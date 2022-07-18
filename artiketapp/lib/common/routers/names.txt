@@ -1,6 +1,5 @@
 static const frameEmailLogin = '/frame_email_login';
 static const frameLoginInit = '/frame_login_init';
-static const frameSignIn = '/frame_sign_in';
 static const frameSignUp = '/frame_sign_up';
 static const frameSignupComplete = '/frame_signup_complete';
 static const frameSignupInit = '/frame_signup_init';
