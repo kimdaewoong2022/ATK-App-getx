@@ -69,7 +69,5 @@ class UserStore extends GetxController {
     await StorageService.to.remove(STORAGE_USER_TOKEN_KEY);
     _isLogin.value = false;
     token = '';
-
-    debugPrint('handleLogout!! : 2 ');
   }
 }

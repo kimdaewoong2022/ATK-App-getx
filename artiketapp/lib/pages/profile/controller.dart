@@ -1,7 +1,7 @@
+import 'package:artiket/common/routers/routes.dart';
 import 'package:artiket/common/services/services.dart';
 import 'package:artiket/common/store/user.dart';
 import 'package:artiket/common/values/storage.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'index.dart';
@@ -16,10 +16,8 @@ class ProfileController extends GetxController {
   var buyerID = StorageService.to.getString(STORAGE_USER_ID);
 
   void handleLogout() {
-    debugPrint('handleLogout!! : 1 ');
     UserStore.to.onLogout();
-    // const RouteSettings(name: AppRoutes.LOGININ_INIT);
-    // update();
+    Get.offAndToNamed(AppRoutes.EMAIL_LOGIN);
   }
 
   // tap
