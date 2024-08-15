@@ -1,2 +1,2 @@
-# ATK-App-getx
-플로터 앱 소스 
+# ATK-App-getx, 플로터 모바일 앱  
+
